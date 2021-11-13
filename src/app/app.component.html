@@ -1,0 +1,8 @@
+<div class="title">
+  <h1>RSS FEEDS</h1>
+  <span class="sub-title">Vul uw RSS link in</span>
+  <!-- 2. input formcontrol property verbonden aan variable in TS bestand -->
+  <input class="rss-link" [formControl]="feed">
+  <button class="submit-button" (click)="getContentFromLink()">Verzenden</button>
+</div>
+<app-feed></app-feed>
