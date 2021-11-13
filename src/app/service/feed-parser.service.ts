@@ -4,6 +4,8 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class RSSParserService {
+    bypassCors: string = "https://cors-anywhere.herokuapp.com/";
+
     public constructor(private httpClient: HttpClient) {
 
     }
@@ -12,6 +14,6 @@ export class RSSParserService {
         console.log(feedLink);
         const requestOptions: Object = { observe: 'body', responseType: 'text'};
 
-        return this.httpClient.get<any>(feedLink, requestOptions);
+        return this.httpClient.get<any>(this.bypassCors + feedLink, requestOptions);
     }
 }

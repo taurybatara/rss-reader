@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strictPropertyInitialization": false,
     "paths": {
       "timers": [
         "node_modules/timers-browserify"

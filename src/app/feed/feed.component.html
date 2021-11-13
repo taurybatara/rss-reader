@@ -1,1 +1,12 @@
 <div>{{feedLink}}</div>
+<div *ngIf="rssFeed">
+    <h2>{{rssFeed.title}} </h2>
+    <p>{{rssFeed.description}}</p>
+
+    <div *ngFor="let item of rssEntries">
+        <h3>{{item.title}}</h3>
+        <p>{{item.contentSnippet}}</p>
+        <button (click)="routeTo(item.link)">Read</button>
+    </div>
+
+</div>
